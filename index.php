@@ -23,13 +23,6 @@
             $customer[$_POST['customer_id']] = new Customer($_POST['customer_id'], $_POST['customer_first_name'], $_POST['customer_last_name'], $_POST['customer_email']);
             echo $customer[$_POST['customer_id']]->__toString();
         }
-    }else if($_SERVER["REQUEST_METHOD"] == "GET"){
-        if($value == "get book"){
-            foreach($b : $books){
-                echo b->__tostring();
-            }
-
-        }
     }
     ?>
 
@@ -57,12 +50,6 @@
         <label for="customer_email">Email:</label>
         <input type="email" name="customer_email"><br>
         <input type="submit" value="Create Customer">
-    </form>
-
-
-    <h2>Show Books</h2>
-    <form method="GET" action="">
-        <input type="submit" value="get book">
     </form>
 </body>
 </html>
